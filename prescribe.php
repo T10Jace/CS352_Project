@@ -22,15 +22,15 @@ $pid = $_GET['pid'];
 if(isset($_POST['prescribe']) && isset($_POST['pid']) && isset($_POST['ID']) && isset($_POST['appdate']) && isset($_POST['apptime']) && isset($_POST['lname']) && isset($_POST['fname'])){
   $appdate = $_POST['appdate'];
   $apptime = $_POST['apptime'];
-  $disease = $_POST['disease'];
-  $allergy = $_POST['allergy'];
+  $illness = $_POST['illness'];
+  $notes = $_POST['notes'];
   $fname = $_POST['fname'];
   $lname = $_POST['lname'];
   $pid = $_POST['pid'];
   $ID = $_POST['ID'];
   $prescription = $_POST['prescription'];
   
-  $query=mysqli_query($con,"insert into prestb(doctor,pid,ID,fname,lname,appdate,apptime,disease,allergy,prescription) values ('$doctor','$pid','$ID','$fname','$lname','$appdate','$apptime','$disease','$allergy','$prescription')");
+  $query=mysqli_query($con,"insert into prestb(doctor,pid,ID,fname,lname,appdate,apptime,illness,notes,prescription) values ('$doctor','$pid','$ID','$fname','$lname','$appdate','$apptime','$illness','$notes','$prescription')");
     if($query)
     {
       echo "<script>alert('Prescribed successfully!');</script>";
@@ -120,16 +120,16 @@ if(isset($_POST['prescribe']) && isset($_POST['pid']) && isset($_POST['ID']) && 
         <form class="form-group" name="prescribeform" method="post" action="prescribe.php">
         
           <div class="row">
-                  <div class="col-md-4"><label>Disease:</label></div>
+                  <div class="col-md-4"><label>Illness:</label></div>
                   <div class="col-md-8">
-                  <!-- <input type="text" class="form-control" name="disease" required> -->
-                  <textarea id="disease" cols="86" rows ="5" name="disease" required></textarea>
+                  <!-- <input type="text" class="form-control" name="illness" required> -->
+                  <textarea id="illness" cols="86" rows ="5" name="illness" required></textarea>
                   </div><br><br><br>
                   
-                  <div class="col-md-4"><label>Allergies:</label></div>
+                  <div class="col-md-4"><label>Notes:</label></div>
                   <div class="col-md-8">
-                  <!-- <input type="text"  class="form-control" name="allergy" required> -->
-                  <textarea id="allergy" cols="86" rows ="5" name="allergy" required></textarea>
+                  <!-- <input type="text"  class="form-control" name="notes" required> -->
+                  <textarea id="notes" cols="86" rows ="5" name="notes" required></textarea>
                   </div><br><br><br>
                   <div class="col-md-4"><label>Prescription:</label></div>
                   <div class="col-md-8">

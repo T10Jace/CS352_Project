@@ -373,8 +373,8 @@ if(isset($_POST['docsub1']))
                     <th scope="col">Last Name</th>
                     <th scope="col">Appointment Date</th>
                     <th scope="col">Appointment Time</th>
-                    <th scope="col">Disease</th>
-                    <th scope="col">Allergy</th>
+                    <th scope="col">Illness</th>
+                    <th scope="col">Notes</th>
                     <th scope="col">Prescription</th>
                   </tr>
                 </thead>
@@ -392,8 +392,8 @@ if(isset($_POST['docsub1']))
                       $lname = $row['lname'];
                       $appdate = $row['appdate'];
                       $apptime = $row['apptime'];
-                      $disease = $row['disease'];
-                      $allergy = $row['allergy'];
+                      $illness = $row['illness'];
+                      $notes = $row['notes'];
                       $pres = $row['prescription'];
 
                       
@@ -405,8 +405,8 @@ if(isset($_POST['docsub1']))
                         <td>$lname</td>
                         <td>$appdate</td>
                         <td>$apptime</td>
-                        <td>$disease</td>
-                        <td>$allergy</td>
+                        <td>$illness</td>
+                        <td>$notes</td>
                         <td>$pres</td>
                       </tr>";
                     }

@@ -194,15 +194,15 @@ CREATE TABLE `prestb` (
   `lname` varchar(50) NOT NULL,
   `appdate` date NOT NULL,
   `apptime` time NOT NULL,
-  `disease` varchar(250) NOT NULL,
-  `allergy` varchar(250) NOT NULL,
+  `illness` varchar(250) NOT NULL,
+  `notes` varchar(250) NOT NULL,
   `prescription` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 -- INSERT DATA INTO TABLE `prestb`
 
-INSERT INTO `prestb` (`doctor`, `pid`, `ID`, `fname`, `lname`, `appdate`, `apptime`, `disease`, `allergy`, `prescription`) VALUES
+INSERT INTO `prestb` (`doctor`, `pid`, `ID`, `fname`, `lname`, `appdate`, `apptime`, `illness`, `notes`, `prescription`) VALUES
 ('Ruby Hughes', 4, 11, 'Kishan', 'Lal', '2020-03-27', '15:00:00', 'Thyroid', 'Nothing', 'Yearly Check-up, everything looks good'),
 ('Sheryl Dickson', 2, 8, 'Alia', 'Bhatt', '2020-03-21', '10:00:00', 'Colon', 'Nothing', 'Take bed rest'),
 ('Katherine Moreno', 9, 12, 'William', 'Blake', '2020-03-26', '12:00:00', 'Pancreas', 'nothing', 'Paracetamol -> 1 every morning and night'),

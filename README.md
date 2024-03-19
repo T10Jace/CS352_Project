@@ -2,7 +2,6 @@
 Website Title: MediQuest 
     - A Medical Management System using MySQL, Php and Bootstrap
 
-
 Video Demo : [Add Video Here]
 
 ## Github Repository
@@ -141,7 +140,7 @@ If the patient deletes the last record (for doctor Sheryl Dickson), then a label
 
 **3. View patients' Prescriptions:**
 
-  &nbsp; &nbsp; &nbsp; Here, the patient can see their prescription history which contains Doctor Name, Appointment ID and Date and Time, Patient Disease/Illness, Patient Allergies, Patient Prescriptions/Appointment Notes, and the Patients' bill payment.(See Fig 1.10).
+  &nbsp; &nbsp; &nbsp; Here, the patient can see their prescription history which contains Doctor Name, Appointment ID and Date and Time, Patient Disease/Illness, Patient Notes, Patient Prescriptions/Appointment Notes, and the Patients' bill payment.(See Fig 1.10).
 	
 ![image](INSERT IMAGE HERE)
 
@@ -210,7 +209,7 @@ This module allows admin to perform six major operations:
 
 **4. View the Prescription lists:**
 
-  &nbsp; &nbsp; &nbsp; Admin can also able to see a list of Prescription information that shows a patient's prescription details from their respective doctors. This includes the Doctor Name, Patient ID(Foreign Key), Appointment ID(Foreign Key), Patient First Name, Patient Last Name, Appointment Date, Appointment Time, Patient Disease/Illness, Patient Allergies, and Prescription. (See Fig 1.19) 
+  &nbsp; &nbsp; &nbsp; Admin can also able to see a list of Prescription information that shows a patient's prescription details from their respective doctors. This includes the Doctor Name, Patient ID(Foreign Key), Appointment ID(Foreign Key), Patient First Name, Patient Last Name, Appointment Date, Appointment Time, Patient Disease/Illness, Patient Notes, and Prescription. (See Fig 1.19) 
   
 ![image](INSERT IMAGE HERE)
   
@@ -246,12 +245,13 @@ This module allows admin to perform six major operations:
   However, due to how our class uses MySQL, we wrote the database's SQL scripts in MySQL workbench and then downloaded the files 
   and added them into a folder called 'databases'.
 
-  This folder contains 3 main files: 
+  This folder contains 5 main files: 
   
   1. ClearDB.sql - Run this script to clear or 'drop' the database and it's tables.
   2. CreateDB.sql - Run this script to ONLY create the databse and begin using it.
-  3. LoadDB.sql - Run this script to ONLY create tables for the database. (ALL TABLES WILL BE NULL/EMPTY).
-  4. mediquestdb.sql - Run This script to create the tables AND fill the tables with data.
+  3. LoadTablesDB.sql - Run this script to ONLY create tables for the database. (ALL TABLES WILL BE NULL/EMPTY).
+  4. LoadDataDB.sql - Run this script after you run 'LoadTablesDB.sql' to fill the tables with data
+  5. mediquestdb.sql - Run This script to create the tables AND fill the tables with data.
 
   This website has a backend which uses the following MySQL database tables:  
 
@@ -316,7 +316,7 @@ This module allows admin to perform six major operations:
     - Last Name
     - Appointment Date
     - Appointment Time
-    - Disease
-    - Allergy
+    - Illness
+    - Notes
     - Prescription
 

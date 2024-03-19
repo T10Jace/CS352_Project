@@ -83,7 +83,7 @@ function generate_bill(){
   $con=mysqli_connect("localhost","root","","mediquestdb");
   $pid = $_SESSION['pid'];
   $output='';
-  $query=mysqli_query($con,"select p.pid,p.ID,p.fname,p.lname,p.doctor,p.appdate,p.apptime,p.disease,p.allergy,p.prescription,a.docFees from prestb p inner join appointmenttb a on p.ID=a.ID and p.pid = '$pid' and p.ID = '".$_GET['ID']."'");
+  $query=mysqli_query($con,"select p.pid,p.ID,p.fname,p.lname,p.doctor,p.appdate,p.apptime,p.illness,p.notes,p.prescription,a.docFees from prestb p inner join appointmenttb a on p.ID=a.ID and p.pid = '$pid' and p.ID = '".$_GET['ID']."'");
   while($row = mysqli_fetch_array($query)){
     $output .= '
     <label> Patient ID : </label>'.$row["pid"].'<br/><br/>
@@ -92,8 +92,8 @@ function generate_bill(){
     <label> Doctor Name : </label>'.$row["doctor"].'<br/><br/>
     <label> Appointment Date : </label>'.$row["appdate"].'<br/><br/>
     <label> Appointment Time : </label>'.$row["apptime"].'<br/><br/>
-    <label> Disease : </label>'.$row["disease"].'<br/><br/>
-    <label> Allergies : </label>'.$row["allergy"].'<br/><br/>
+    <label> Illness : </label>'.$row["illness"].'<br/><br/>
+    <label> Notes : </label>'.$row["notes"].'<br/><br/>
     <label> Prescription : </label>'.$row["prescription"].'<br/><br/>
     <label> Fees Paid : </label>'.$row["docFees"].'<br/>
     
@@ -534,8 +534,8 @@ function get_specs(){
                     <th scope="col">Appointment ID</th>
                     <th scope="col">Appointment Date</th>
                     <th scope="col">Appointment Time</th>
-                    <th scope="col">Diseases</th>
-                    <th scope="col">Allergies</th>
+                    <th scope="col">Illnesses</th>
+                    <th scope="col">Notes</th>
                     <th scope="col">Prescriptions</th>
                     <th scope="col">Bill Payment</th>
                   </tr>
@@ -546,7 +546,7 @@ function get_specs(){
                     $con=mysqli_connect("localhost","root","","mediquestdb");
                     global $con;
 
-                    $query = "select doctor,ID,appdate,apptime,disease,allergy,prescription from prestb where pid='$pid';";
+                    $query = "select doctor,ID,appdate,apptime,illness,notes,prescription from prestb where pid='$pid';";
                     
                     $result = mysqli_query($con,$query);
                     if(!$result){
@@ -561,8 +561,8 @@ function get_specs(){
                         <td><?php echo $row['ID'];?></td>
                         <td><?php echo $row['appdate'];?></td>
                         <td><?php echo $row['apptime'];?></td>
-                        <td><?php echo $row['disease'];?></td>
-                        <td><?php echo $row['allergy'];?></td>
+                        <td><?php echo $row['illness'];?></td>
+                        <td><?php echo $row['notes'];?></td>
                         <td><?php echo $row['prescription'];?></td>
                         <td>
                           <form method="get">

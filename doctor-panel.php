@@ -18,10 +18,10 @@ if(isset($_GET['cancel']))
   //   $ID = $_GET['ID'];
   //   $appdate = $_GET['appdate'];
   //   $apptime = $_GET['apptime'];
-  //   $disease = $_GET['disease'];
-  //   $allergy = $_GET['allergy'];
+  //   $illness = $_GET['illness'];
+  //   $notes = $_GET['notes'];
   //   $prescription = $_GET['prescription'];
-  //   $query=mysqli_query($con,"insert into prestb(doctor,pid,ID,appdate,apptime,disease,allergy,prescription) values ('$doctor',$pid,$ID,'$appdate','$apptime','$disease','$allergy','$prescription');");
+  //   $query=mysqli_query($con,"insert into prestb(doctor,pid,ID,appdate,apptime,illness,notes,prescription) values ('$doctor',$pid,$ID,'$appdate','$apptime','$illness','$notes','$prescription');");
   //   if($query)
   //   {
   //     echo "<script>alert('Prescribed successfully!');</script>";
@@ -264,8 +264,8 @@ if(isset($_GET['cancel']))
                     <th scope="col">Appointment ID</th>
                     <th scope="col">Appointment Date</th>
                     <th scope="col">Appointment Time</th>
-                    <th scope="col">Disease</th>
-                    <th scope="col">Allergy</th>
+                    <th scope="col">Illness</th>
+                    <th scope="col">Notes</th>
                     <th scope="col">Prescribe</th>
                   </tr>
                 </thead>
@@ -275,7 +275,7 @@ if(isset($_GET['cancel']))
                     $con=mysqli_connect("localhost","root","","mediquestdb");
                     global $con;
 
-                    $query = "select pid,fname,lname,ID,appdate,apptime,disease,allergy,prescription from prestb where doctor='$doctor';";
+                    $query = "select pid,fname,lname,ID,appdate,apptime,illness,notes,prescription from prestb where doctor='$doctor';";
                     
                     $result = mysqli_query($con,$query);
                     if(!$result){
@@ -293,8 +293,8 @@ if(isset($_GET['cancel']))
                         
                         <td><?php echo $row['appdate'];?></td>
                         <td><?php echo $row['apptime'];?></td>
-                        <td><?php echo $row['disease'];?></td>
-                        <td><?php echo $row['allergy'];?></td>
+                        <td><?php echo $row['illness'];?></td>
+                        <td><?php echo $row['notes'];?></td>
                         <td><?php echo $row['prescription'];?></td>
                     
                       </tr>
