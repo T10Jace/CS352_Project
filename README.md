@@ -34,8 +34,6 @@ Video Demo : [Add Video Here]
 6. MySQL (An RDBMS that uses SQL) * https://www.mysql.com/products/workbench/ (optional)
 7. TCPDF (to generate PDFs)
 
-## Database
-
 
 ## Steps to run the project in your machine
 1. Download and install XAMPP in your machine
@@ -44,15 +42,18 @@ Video Demo : [Add Video Here]
 4. Start the Apache and Mysql in your XAMPP control panel.
 5. Open your web browser and type 'localhost/phpmyadmin'
 6. In phpmyadmin page, create a new database from the left panel and name it as 'mediquestdb'
-7. Import the file 'mediquestdb.sql' inside your newly created database and click ok. (Should be located in the database folder ex: )
-8. Open a new tab and type 'localhost/foldername' in the url of your browser (Most Likely 'localhost/CS352_Project/MediQuest/index.php')
+7. Import the file 'mediquestdb.sql' inside your newly created database and click ok. (Should be located in the database folder ex: path/to/MediQuest/database)
+8. Open a new tab and type 'localhost/foldername' in the url of your browser (Most Likely 'localhost/MediQuest')
 9. You should now have a local website running with a database!
     
 ### SOFTWARES USED
   - XAMPP was installed on the Ubuntu 19.04 machine and APACHE2 Server and MySQL were initialized. And, files were built locally inside 'This PC/Windows(C:)/xampp/htdocs/MediQuest
   - Sublime Text 3.2 was used as a text editor.
   - Microsoft Edge Version 122.0.2365.80 was used to run the project (localhost/CS352_Project/MediQuest was used as the url).
-  
+
+### Front-end Templates and Assistance
+    - Cloudflare, used for libraries (https://cdnjs.com/libraries)
+    - Used an online github repo as a front-end template for using XAMPP (https://github.com/kishan0725/Hospital-Management-System)
 
 ### Starting Apache And MySQL in XAMPP:
   The XAMPP Control Panel allows you to manually start and stop Apache and MySQL. To start Apache or MySQL manually, click the ‘Start’ button under ‘Actions’.
