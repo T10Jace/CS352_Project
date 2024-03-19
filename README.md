@@ -1,35 +1,41 @@
 # Medical Management System
-Cancer Center - Medical Management System using MySQL, Php and Bootstrap
-  
+Website Title: MediQuest 
+    - A Medical Management System using MySQL, Php and Bootstrap
+
 
 Video Demo : [Add Video Here]
 
+## Github Repository
+  https://github.com/T10Jace/CS352_Project
 
 ## Need to work on:
-1. Ability to accept the appointment by the doctor to acknowledge the patient that their appointment has been approved.
-2. User should not be allowed to register if he/she tries to provide the already registered email ID.
-3. The password should be encrypted and the password field shouldn't be displayed in the admin panel.
-4. Implementation of pagination for all the list view across the application.
-5. Bug fix - Bill payment receipt contains multiple record if the patient has associated with the same doctor multiple times.
-6. Addition of more fields in the prescription statement to make it more specific one.
-7. Addition of more details on payment - such as date of the payment made, amount paid, etc.
-8. Implementation of export button in admin module to export all details to an excel sheet.
+1. Apply a dashboard representing different cancer statistics
+2. Ability to accept the appointment by the doctor to acknowledge the patient that their appointment has been approved.
+3. Fix header (navigation bar) to match on all pages
+4. Fix Footer on Doctors page
+5. The password should be encrypted and the password field shouldn't be displayed in the admin panel.
+6. Bug fix - Bill payment receipt contains multiple record if the patient has associated with the same doctor multiple times.
+7. Addition of more fields in the prescription statement to make it more specific one.
+8. Addition of more details on payment - such as date of the payment made, amount paid, etc.
+9. Implementation of export button in admin module to export all details to an excel sheet.
+
 
 ## Prerequisites
 1. Install XAMPP web server: https://www.apachefriends.org/download.html
-2. Any Editor (We are using Visual Studio Code)
-3. Any web browser with latest version (We are using )
+2. Any Editor (We are using Visual Studio Code) https://code.visualstudio.com/download
+3. Any web browser with latest version (Preferably Microsoft Edge or Google Chrome)
 
 ## Languages and Technologies used
 1. HTML5/CSS
 2. JavaScript (to create dynamically updating content)
-3. Bootstrap (An HTML, CSS, and JS library)
-4. XAMPP (A web server by Apache Friends)
+3. Bootstrap (An HTML, CSS, and JS library) https://getbootstrap.com/
+4. XAMPP (A web server by Apache Friends) https://www.apachefriends.org/download.html
 5. Php
-6. MySQL (An RDBMS that uses SQL)
+6. MySQL (An RDBMS that uses SQL) * https://www.mysql.com/products/workbench/ (optional)
 7. TCPDF (to generate PDFs)
 
 ## Database
+
 
 ## Steps to run the project in your machine
 1. Download and install XAMPP in your machine
@@ -233,9 +239,23 @@ This module allows admin to perform six major operations:
   
 
 ## Database
+
+  In this project, we use MySQL connecting with XAMPP through php, which requires using phpmyadmin () for accessing the database.
+
+  However, due to how our class uses MySQL, we wrote the database's SQL scripts in MySQL workbench and then downloaded the files 
+  and added them into a folder called 'databases'.
+
+  This folder contains 3 main files: 
+  
+  1. ClearDB.sql - Run this script to clear or 'drop' the database and it's tables.
+  2. CreateDB.sql - Run this script to ONLY create the databse and begin using it.
+  3. LoadDB.sql - Run this script to ONLY create tables for the database. (ALL TABLES WILL BE NULL/EMPTY).
+  4. mediquestdb.sql - Run This script to create the tables AND fill the tables with data.
+
   This website has a backend which uses the following MySQL database tables:  
 
   **1. Admin Table:**
+    
     - Username
     - Password
 
