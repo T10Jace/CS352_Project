@@ -85,7 +85,7 @@ This system has a ‘Home’ page from where the patient, doctor & administrator
 
 ![image](INSERT IMAGE HERE)
 
-‘Contact’ page allows users to provide feedback or queries about the services of the hospital. Fig 1.3 shows the ‘Contact’ page.
+‘Contact’ page allows users to provide feedback or messages about the services of the hospital. Fig 1.3 shows the ‘Contact’ page.
 
 ![image](INSERT IMAGE HERE)
 
@@ -140,7 +140,7 @@ If the patient deletes the last record (for doctor Sheryl Dickson), then a label
 
 **3. View patients' Prescriptions:**
 
-  &nbsp; &nbsp; &nbsp; Here, the patient can see their prescription history which contains Doctor Name, Appointment ID and Date and Time, Patient Disease/Illness, Patient Notes, Patient Prescriptions/Appointment Notes, and the Patients' bill payment.(See Fig 1.10).
+  &nbsp; &nbsp; &nbsp; Here, the patient can see their prescription history which contains Doctor Name, Appointment ID and Date and Time, Patient Illness, Patient Notes, Patient Prescriptions/Appointment Notes, and the Patients' bill payment.(See Fig 1.10).
 	
 ![image](INSERT IMAGE HERE)
 
@@ -176,7 +176,7 @@ In real-time, the doctors will have thousands of appointments. It will be easier
 
 ### Admin Module:
    
-   &nbsp; &nbsp; &nbsp; This module is the heart of our project where an admin can see the list of all patients, Doctors, and appointments. As well as the feedback/queries received from the ‘Contact’ page. The admin is also the only person(s) with the access to add/remove doctors. 
+   &nbsp; &nbsp; &nbsp; This module is the heart of our project where an admin can see the list of all patients, Doctors, and appointments. As well as the messages received from the ‘Contact’ page. The admin is also the only person(s) with the access to add/remove doctors. 
   &nbsp; &nbsp; &nbsp; Log-in to the admin account can be done by toggling into the 'Receptionist' tab of the Home page. Fig 1.14 shows the login page for admin.
   &nbsp; &nbsp; &nbsp; `username`: admin, `password`: admin123
 
@@ -209,7 +209,7 @@ This module allows admin to perform six major operations:
 
 **4. View the Prescription lists:**
 
-  &nbsp; &nbsp; &nbsp; Admin can also able to see a list of Prescription information that shows a patient's prescription details from their respective doctors. This includes the Doctor Name, Patient ID(Foreign Key), Appointment ID(Foreign Key), Patient First Name, Patient Last Name, Appointment Date, Appointment Time, Patient Disease/Illness, Patient Notes, and Prescription. (See Fig 1.19) 
+  &nbsp; &nbsp; &nbsp; Admin can also able to see a list of Prescription information that shows a patient's prescription details from their respective doctors. This includes the Doctor Name, Patient ID(Foreign Key), Appointment ID(Foreign Key), Patient First Name, Patient Last Name, Appointment Date, Appointment Time, Patient Illness, Patient Notes, and Prescription. (See Fig 1.19) 
   
 ![image](INSERT IMAGE HERE)
   
@@ -222,14 +222,14 @@ This module allows admin to perform six major operations:
   After adding a new doctor, if we check the doctor’s list, we will see the details of new doctor is added to the list as shown in the Fig 1.21
   
 ![image](INSERT IMAGE HERE)
-  
-**6. View User’s feedback/Queries from the 'Contact' Page:**
 
-  &nbsp; &nbsp; &nbsp; Admin is allowed to view the feedback/Query that has been given by the user in the ‘Contact’ page (Refer Fig 1.3). This includes the User’s Name, Email Id, Contact Number and the message(Feedback/ Query) as shown in the Fig 1.22.
+**6. View User’s Message Queries from the 'Contact' Page:**
+
+  &nbsp; &nbsp; &nbsp; Admin is allowed to view the message(s) that has been given by the user in the ‘Contact’ page (Refer Fig 1.3). This includes the User’s Name, Email Id, Contact Number and Message as shown in the Fig 1.22.
   
 ![image](INSERT IMAGE HERE)
 
-  Admin can also use the search bar above to filter feedback queries through searching by a user's unique 'Contact' field.
+  Admin can also use the search bar above to filter messages queries through searching by a user's unique 'Contact' field.
   
   ![image](INSERT IMAGE HERE)
 
